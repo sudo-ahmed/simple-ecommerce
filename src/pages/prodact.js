@@ -1,0 +1,67 @@
+const categories = [
+    {id: 1000, name: 'clothes', img: 'cate-clothes.jpg'},
+    {id: 2000, name: 'shoes', img: 'cate-shoes.jpg'},
+    {id: 3000, name: 'accessories', img: 'cate-watch.jpg'}
+]
+const products = [
+    {id:1, title:'Cut T-Shirt Adidas', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:121.66, rate:3, cate: 'clothes', discount: false, img:['cut-adidas.jpg'] },
+    {id:2, title:'Cut T-Shirt Nike', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:125.98, rate:5, cate: 'clothes', discount: false, img:['cut-nike.jpg'] },
+    {id:3, title:'Cut T-Shirt Puma', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:133.98, rate:3, cate: 'clothes', discount: false, img:['cut-puma.jpg'] },
+    {id:4, title:'Cut T-Shirt Armor', date: new Date("2022-05-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:144.98, rate:3, cate: 'clothes', discount: false, img:['cut-armor.jpg'] },
+    {id:5, title:'Hat Sports Adidas', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:112.98, rate:3, cate: 'clothes', discount: false, img:['hat-adidas.jpg'] },
+    {id:6, title:'Hat Sports Nike', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:135.98, rate:3, cate: 'clothes', discount: true, img:['hat-nike.jpg'] },
+    {id:7, title:'Hat Sports Puma', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:138.98, rate:3, cate: 'clothes', discount: false, img:['hat-puma.jpg'] },
+    {id:8, title:'Hat Sports Armor', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:109.98, rate:3, cate: 'clothes', discount: false, img:['hat-armor.jpg'] },
+    {id:9, title:'Hoodie For Men Adidas', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:124.98, rate:3, cate: 'clothes', discount: false, img:['hoodie-adidas.jpg'] },
+    {id:10, title:'Hoodie For Men Nike', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:128.98, rate:3, cate: 'clothes', discount: false, img:['hoodie-nike.jpg'] },
+    {id:11, title:'Hoodie For Men Puma', date: new Date("2022-04-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:142.98, rate:3, cate: 'clothes', discount: false, img:['hoodie-puma.jpg'] },
+    {id:12, title:'Hoodie For Men Armor', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:134.98, rate:5, cate: 'clothes', discount: false, img:['hoodie-armor.jpg'] },
+    {id:13, title:'Pants Comfortable Sport Adidas', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:126.98, rate:3, cate: 'clothes', discount: false, img:['pants-adidas.jpg'] },
+    {id:14, title:'Pants Comfortable Sport Nike', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:115.98, rate:3, cate: 'clothes', discount: false, img:['pants-nike.jpg'] },
+    {id:15, title:'Pants Comfortable Sport Puma', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:113.98, rate:3, cate: 'clothes', discount: false, img:['pants-puma.jpg'] },
+    {id:16, title:'Pants Comfortable Sport Armor', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:141.98, rate:3, cate: 'clothes', discount: false, img:['pants-armor.jpg'] },
+    {id:17, title:'T-Shirt Sports Adidas', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:129.98, rate:3, cate: 'clothes', discount: false, img:['poloshirt-adidas.jpg'] },
+    {id:18, title:'T-Shirt Sports Nike', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:100.98, rate:3, cate: 'clothes', discount: false, img:['poloshirt-nike.jpg'] },
+    {id:19, title:'T-Shirt Sports Puma', date: new Date("2022-06-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:130.98, rate:3, cate: 'clothes', discount: false, img:['poloshirt-puma.jpg'] },
+    {id:20, title:'T-Shirt Sports Armor', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:156.98, rate:3, cate: 'clothes', discount: false, img:['poloshirt-armor.jpg'] },
+    {id:21, title:'Polo T-Shirt Classic Adidas', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:142.98, rate:3, cate: 'clothes', discount: false, img:['short-adidas.jpg'] },
+    {id:22, title:'Polo T-Shirt Classic Nike', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:127.98, rate:3, cate: 'clothes', discount: false, img:['short-nike.jpg'] },
+    {id:23, title:'Polo T-Shirt Classic Puma', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:114.98, rate:3, cate: 'clothes', discount: false, img:['short-puma.jpg'] },
+    {id:24, title:'Polo T-Shirt Classic Armor', date: new Date("2022-07-2"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:163.98, rate:3, cate: 'clothes', discount: false, img:['short-armor.jpg'] },
+    {id:25, title:'Short Sport For Men Adidas', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:123.98, rate:3, cate: 'clothes', discount: false, img:['tshirt-adidas.jpg'] },
+    {id:26, title:'Short Sport For Men Nike', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:146.98, rate:3, cate: 'clothes', discount: false, img:['tshirt-nike.jpg'] },
+    {id:27, title:'Short Sport For Men Puma', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:153.98, rate:3, cate: 'clothes', discount: false, img:['tshirt-puma.jpg'] },
+    {id:28, title:'Short Sport For Men Armor', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:159.98, rate:3, cate: 'clothes', discount: false, img:['tshirt-armor.jpg'] },
+    {id:29, title:'Socks For Men Adidas', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:162.98, rate:3, cate: 'clothes', discount: false, img:['socks-adidas.jpg'] },
+    {id:30, title:'Socks For Men Nike', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:134.98, rate:3, cate: 'clothes', discount: false, img:['socks-nike.jpg'] },
+    {id:31, title:'Socks For Men Puma', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:169.98, rate:3, cate: 'clothes', discount: true, img:['socks-puma.jpg'] },
+    {id:32, title:'Socks For Men Armor', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:148.98, rate:3, cate: 'clothes', discount: false, img:['socks-armor.jpg'] },
+    {id:34, title:'Runnig Shoes Adidas', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:66.6, rate:3, cate: 'shoes', discount: false, img:['running-adidas.jpg'] },
+    {id:35, title:'Runnig Shoes Nike', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:57.78, rate:3, cate: 'shoes', discount: false, img:['running-nike.jpg'] },
+    {id:36, title:'Runnig Shoes Puma', date: new Date("2022-06-5"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:68.44, rate:3, cate: 'shoes', discount: false, img:['running-puma.jpg'] },
+    {id:37, title:'Runnig Shoes Polo', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:73.12, rate:3, cate: 'shoes', discount: false, img:['running-polo.jpg'] },
+    {id:38, title:'Runnig Shoes Lacost', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:79.34, rate:3, cate: 'shoes', discount: false, img:['running-lacost.jpg'] },
+    {id:39, title:'Sneaker Shoes Adidas', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:68.98, rate:3, cate: 'shoes', discount: true, img:['sneaker-adidas.jpg'] },
+    {id:40, title:'Sneaker Shoes Nike', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:53.98, rate:3, cate: 'shoes', discount: false, img:['sneaker-nike.jpg'] },
+    {id:41, title:'Sneaker Shoes Puma', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:94.98, rate:3, cate: 'shoes', discount: false, img:['sneaker-puma.jpg'] },
+    {id:42, title:'Sneaker Shoes Polo', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:84.98, rate:5, cate: 'shoes', discount: false, img:['sneaker-polo.jpg'] },
+    {id:43, title:'Sneaker Shoes Lacost', date: new Date("2022-03-25"), color: ['red', 'green', 'blue'], size:  ['m', 'lg', 'xl'], price:87.98, rate:3, cate: 'shoes', discount: false, img:['sneaker-lacost.jpg'] },
+    {id:44, title:'Belt Brown For Men', date: new Date("2022-03-25"), color: [], size:  ['m'], price:14.98, rate:3, cate: 'accessories', discount: false, img:['belt.jpg'] },
+    {id:45, title:'Wallet Black For Men', date: new Date("2022-03-25"), color: [], size:  [], price:10.98, rate:3, cate: 'accessories', discount: false, img:['wallet.jpg'] },
+    {id:46, title:'Rings Many Colors (4 Pice)', date: new Date("2022-03-25"), color: [], size:  [], price:9.98, rate:3, cate: 'accessories', discount: false, img:['ring.jpg'] },
+    {id:47, title:'Sunglass Attractive', date: new Date("2022-03-25"), color: [], size:  [], price:13.98, rate:3, cate: 'accessories', discount: true, img:['sunglass.jpg'] },
+    {id:48, title:'Watch Black For Men', date: new Date("2022-03-25"), color: [], size:  [], price:150.58, rate:5, cate: 'accessories', discount: false, img:['watch.jpg'] },
+]
+
+const info = [{brand: [
+    {id: 1, logo: 'adidas.png', name: 'adidas'},
+    {id: 2, logo: 'nike.png', name: 'nike'},
+    {id: 3, logo: 'lacost.png', name: 'lacost'},
+    {id: 4, logo: 'puma.png', name: 'puma'},
+    {id: 5, logo: 'polo.png', name: 'polo'}
+]}]
+export const data = {
+    cate: categories,
+    products: products,
+    info: info
+}

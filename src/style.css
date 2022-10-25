@@ -1,0 +1,182 @@
+.nav-logo{
+    font-family: serif;
+    font-size: 25px;
+    text-decoration: none !important;
+    color: #333 !important;
+    font-weight: bold;
+    padding: 5px;
+}
+.nav-link{
+    padding: 10px;
+    display: inline-block;
+    text-decoration: none !important;
+    color: #333 !important;
+    font-weight: bold;
+    text-transform: capitalize;
+    border-bottom:2px solid transparent;
+    text-align: center;
+
+}
+.nav-link:hover{
+    border-bottom-color:#333;
+}
+.MuiDrawer-paper{
+    width: 40%
+}
+.main-footer{
+    background-color: #333;
+}
+.img-cate{
+    height: 40px !important;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+.caption-cate{
+    text-decoration: none;
+    color:#333 ;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+
+}
+.caption-cate:hover{
+    opacity: 0.8;
+}
+.title-section{
+    text-transform: capitalize;
+}
+.action-card{
+    display: block !important;
+}
+.img-card{
+    object-fit:scale-down !important;
+}
+.card:hover .img-card{
+    opacity: 0.8;
+}
+.card:hover{
+    box-shadow:0px 2px 1px -1px #0683ff, 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%) !important;
+}
+.title-card{
+    font-size: 1rem;
+    font-weight: bold !important;
+    height: 50px;
+    overflow: hidden;
+    display: block;
+    text-decoration: none !important;
+    color: #333 !important;
+    line-height: 25px;
+    margin-bottom: 5px;}
+.price-card{
+    color: green;
+}
+.title-item{
+    font-size: 1.5rem;
+    margin: 0;
+}
+.img-item{
+    max-height: 180px;
+    max-width: 260px;
+}
+.price-item{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: green
+}
+.colors-item > *{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+}
+.color-item{
+    opacity: 0.8;
+}
+
+.scroll-list{
+    overflow-x: auto;
+}
+.scroll-list::-webkit-scrollbar{
+    display: none;
+}
+.img-baner{
+    width: 100%;
+}
+.slide-main{
+    position: relative;
+}
+.slide-btn{
+    position: absolute;
+    height: 100%;
+    display: none ;
+    background-color: rgba(228, 226, 226, 0.315);
+    border: none;
+    padding: 20px;
+    align-items: center;
+}
+.back{
+    left: 0;
+}
+.next{
+    right: 0;
+}
+.slide-main:hover .slide-btn{
+    display: inline-flex ;
+}
+.active{
+    opacity: 1;
+}
+.none-active{
+    opacity: 0.7;
+}
+.side-imgs{
+    max-height: 200px;
+    overflow: auto;
+}
+.side-imgs::-webkit-scrollbar{
+    display: none;
+}
+.active-size{
+    background-color: #0683ff !important;
+    color: white !important;
+}
+.active-color{
+    opacity: 0.6;
+    border: 2px solid black;
+}
+.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper{
+    min-width: 300px !important;
+    max-width: 320px !important;
+    right: 0;
+    left: auto !important;
+    margin: 10px 20px;
+}
+.menu-item{
+    justify-content: space-between !important;
+    flex-wrap: wrap;
+}
+.btn-count{
+    min-width: 25px ;
+    padding: 5px ;
+    background-color: rgb(155, 153, 153) ;
+    color: black ;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+.input-contact{
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    height: max-content;
+}
+input[type="submit"]{
+    width: 30%;
+    margin: auto;
+    background-color: #333;
+    color: white;
+    border: none;
+}
